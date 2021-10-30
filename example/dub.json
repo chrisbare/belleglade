@@ -1,0 +1,14 @@
+{
+	"name": "example",
+
+	"targetType": "executable",
+	"preBuildCommands": ["../belleglade -i exampleui.glade -o exampleui.d -c ExampleUI -m exampleui"],
+	"sourceFiles": ["main.d", "example.d", "exampleui.d"],
+	"dependencies": {
+		"dxml": "~>0.4.0"
+	},
+	"comment": "update the path below to point to your GtkD installation",
+	"dependencies": {
+		"gtk-d:gtkd": {"path": "../../../tools/GtkD" },
+	}
+}
