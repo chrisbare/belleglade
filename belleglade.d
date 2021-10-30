@@ -139,7 +139,7 @@ int main (string[] args)
 	string fileName = "mainwinui.glade";
 	string output = "somemodule";
 	GetoptResult rslt;
-	LogLevel ll = LogLevel.trace;
+	LogLevel ll = LogLevel.error;
 	Document doc;
 
 	if (args.length < 5)
@@ -172,6 +172,7 @@ int main (string[] args)
 		return (0);
 	}
 
+	sharedLog.logLevel = ll;
 	initParamTypes ();
 	initAltPrefix ();
 	try
