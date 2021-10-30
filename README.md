@@ -83,13 +83,13 @@ Usage
 
 Notes
 -----
-The generated object corresponds to the <interface> and is not a widget.
-if an object has no id and no signal handlers, it is ignored.
-if an object has no id but has signal handlers, an id is automatically assigned.
-if it has an id, it's type is added to the import list. (no dupes)
-if it has an id, a variable is created for it and populated.
-if it has signals, a delegate is created and connected.
-the widget namespace is flattened, so all id's must be unique.
+* The generated object corresponds to the <interface> and is not a widget.
+* if an object has no id and no signal handlers, it is ignored.
+* if an object has no id but has signal handlers, an id is automatically assigned.
+* if it has an id, it's type is added to the import list. (no dupes)
+* if it has an id, a variable is created for it and populated.
+* if it has signals, a delegate is created and connected.
+* the widget namespace is flattened, so all id's must be unique.
 
 License
 -------
