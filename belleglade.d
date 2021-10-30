@@ -1,3 +1,11 @@
+/**
+ * a tool to make working with GtkD and glade easier
+ * by generating a D class that connects handlers to methods
+ *
+ * Copyright:   Copyright (C) 2021 by Chris Bare, All Rights Reserved
+ * License:	GPL3 https://www.gnu.org/licenses/gpl-3.0.en.html
+*/
+
 import std.experimental.logger;
 import std.getopt;
 import std.string;

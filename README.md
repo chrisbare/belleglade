@@ -7,12 +7,14 @@ Unlike gladeD, the class generated is not derived from a Gtk class, so you can h
 conventions when the function names get too long.
 
 Belleglade processes a .glade file and generates a .d file based on it. Any widget which has an ID assigned in glade becomes a class member. Any signals defined are attached to a class method of the
-same name. This makes it easy to create another class and override all the handler methods to implment your functionality.
+same name. This makes it easy to create another class and override all the handler methods to implement your functionality.
 
 Example
 -------
 Given a file called exampleui.glade, run belleglade:
-`belleglade -i exampleui.glade -o exampleui.d -c ExampleUI -m exampleui`
+```
+belleglade -i exampleui.glade -o exampleui.d -c ExampleUI -m exampleui
+```
 This generates exampleui.d containing:
 ```d
 module exampleui;
@@ -29,7 +31,8 @@ abstract class ExampleUI
 	Builder __builder;
 	ApplicationWindow mainWindow;
 	Button redAlert;
-	Button w0004;	// note if you do not assign an ID, but do define a handler, an id is generated
+// note if you do not assign an ID, but do define a handler, an id is generated
+	Button w0004;
 
 	this ()
 	{
@@ -70,12 +73,13 @@ A working version of this example is in the example directory.
 
 Usage
 -----
+```
 -i      --input Required: The glade file you want to transform. The input file must be a valid glade file. Errors in the glade file will not be detected.
 -o     --output Required: The file to write the resulting module to.
 -c  --classname Required: The name of the resulting class.
 -m --modulename Required: The module name of the resulting file.
 -h       --help           This help information
-
+```
 
 Notes
 -----
@@ -85,7 +89,8 @@ if an object has no id but has signal handlers, an id is automatically assigned.
 if it has an id, it's type is added to the import list. (no dupes)
 if it has an id, a variable is created for it and populated.
 if it has signals, a delegate is created and connected.
-the widget namespace is flatened, so all id's must be unique.
+the widget namespace is flattened, so all id's must be unique.
+
 License
 -------
 GPL3
