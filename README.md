@@ -59,7 +59,7 @@ abstract class ExampleUI
 }
 ```
 Then you can subclass ExampleUI and define your own handlers.
-```
+```d
 class Example: ExampleUI
 {
 	override
