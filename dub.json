@@ -3,14 +3,14 @@
 		"Chris Bare"
 	],
 	"copyright": "Copyright © 2021, Chris Bare",
+	"description": "a tool to make working with GtkD and glade easier by generating a D class that connects handlers to methods",
+	"license": "GPL v3",
+	"name": "belleglade",
+	"targetType": "executable",
 	"dependencies": {
 		"hunt-xml": ">=1.1.0-rc.5 <1.2.0-0"
 	},
-	"description": "converts a .glade file into a UI base class in D",
-	"license": "GPL v3",
-	"name": "belleglade",
 	"sourceFiles": [
 		"belleglade.d"
-	],
-	"targetType": "executable"
+	]
 }
